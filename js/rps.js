@@ -88,13 +88,13 @@ export class Rps {
     let roundResult;
     while (this.playerScore < 3 && this.computerScore < 3) {
       player = prompt(
-        'Type "Rock," "Paper," or "Scissors"'
+        'Type "Rock," "Paper," or "Scissors".'
       );
       computer = this.computerPlay();
       roundResult = this.playRound(player, computer);
       while (roundResult == 'Error') {
         player = prompt(
-          'Invalid input. Please type "Rock," "Paper," or "Scissors"'
+          'Invalid input. Please type "Rock," "Paper," or "Scissors".'
         );
         computer = this.computerPlay();
         roundResult = this.playRound(player, computer);
@@ -105,9 +105,9 @@ export class Rps {
     }
     let playAgain;
     if (this.playerScore > this.computerScore) {
-      playAgain = confirm('You win the set! Play again?');
+      playAgain = confirm('You win the set :)! Play again?');
     } else {
-      playAgain = confirm('You lost the set :( Play again?');
+      playAgain = confirm('You lost the set :(. Play again?');
     }
     this.clearScores();
     return playAgain;

@@ -1,0 +1,15 @@
+html, body {
+    font-size:large;
+    margin: 0;
+    height: 100%;
+    background-color: #102027;
+}
+
+#headingLink {
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 40%;
+    margin-right: 40%;
+}
