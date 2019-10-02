@@ -88,7 +88,7 @@ export class Rps {
     let roundResult;
     while (this.playerScore < 3 && this.computerScore < 3) {
       player = prompt(
-        'Type "Rock," "Paper," or "Scissors"\n(Check the console with CTRL+Shift+J for results and game status)'
+        'Type "Rock," "Paper," or "Scissors"'
       );
       computer = this.computerPlay();
       roundResult = this.playRound(player, computer);
