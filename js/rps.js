@@ -1,4 +1,4 @@
-// Required to pass around string values
+// Rock paper scissor class
 export class Rps {
   constructor() {
     this.playerScore = 0;
@@ -11,7 +11,7 @@ export class Rps {
 
   computerPlay(input = 0) {
     let result;
-    if (input == 0) input = rand0toX(3);
+    if (input == 0) input = this.rand0toX(3);
     input = Math.ceil(input);
     switch (input) {
       case 1:
@@ -29,10 +29,10 @@ export class Rps {
     return result;
   }
 
-  comparePlays(player, computer) {
+  comparePlays(playerSelection, computerSelection) {
     let result;
-    player = player.toLowerCase();
-    computer = computer.toLowerCase();
+    let player = playerSelection.toLowerCase();
+    let computer = computerSelection.toLowerCase();
     if (player == 'rock') {
       if (computer == 'scissors') {
         result = 'w';
@@ -66,14 +66,50 @@ export class Rps {
   playRound(player, computer) {
     let output;
     let result = this.comparePlays(player, computer);
-    if (result == 'w') output = 'You win. ' + player + ' beats ' + computer;
-    else if (result == 'l') output = 'You lose. ' + player + ' loses to ' + computer;
-    else if (result == 'd') output = 'Draw. Both picked ' + player;
-    else output = 'Error, no result.';
+    if (result == 'w') {
+      this.playerScore += 1;
+      output = 'You win. ' + player + ' beats ' + computer + '.';
+    } else if (result == 'l') {
+      this.computerScore += 1;
+      output = 'You lose. ' + player + ' loses to ' + computer + '.';
+    } else if (result == 'd') output = 'Draw. Both picked ' + player + '.';
+    else output = 'Error';
     return output;
   }
 
-  confirmSelection() {}
+  clearScores() {
+    this.playerScore = 0;
+    this.computerScore = 0;
+  }
 
-  playBestOf5() {}
+  game() {
+    let player;
+    let computer;
+    let roundResult;
+    while (this.playerScore < 3 && this.computerScore < 3) {
+      player = prompt(
+        'Type "Rock," "Paper," or "Scissors"\n(Check the console with CTRL+Shift+J for results and game status)'
+      );
+      computer = this.computerPlay();
+      roundResult = this.playRound(player, computer);
+      while (roundResult == 'Error') {
+        player = prompt(
+          'Invalid input. Please type "Rock," "Paper," or "Scissors"'
+        );
+        computer = this.computerPlay();
+        roundResult = this.playRound(player, computer);
+      }
+      alert(
+        roundResult + 'The score is: ' + this.playerScore + ' to ' + this.computerScore + '.'
+      );
+    }
+    let playAgain;
+    if (this.playerScore > this.computerScore) {
+      playAgain = confirm('You win the set! Play again?');
+    } else {
+      playAgain = confirm('You lost the set :( Play again?');
+    }
+    this.clearScores();
+    return playAgain;
+  }
 }
