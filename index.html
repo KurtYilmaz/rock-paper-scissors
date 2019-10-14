@@ -3,17 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <title>Rock, Paper, Scissors</title>
-    <script src="js/rps.js" type="module"></script>
-    <script src="js/main.js" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/ed016bf43b.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
   <body>
-    <h1>
-      <a
-        id="headingLink"
-        href="https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors"
-        >"Rock, Paper, Scissors" for the Odin Project</a
-      >
-    </h1>
+    <div id="viewport">
+      <div id="header">
+        <div id="headerContent">
+            <div>Rock, Paper, Scissors</div>
+        </div>
+      </div>
+
+      <div id="content">
+        <div id="playArea">
+
+          <div id="computerChoice">
+            <div id="computerScissors" class="computerHand">
+                <span class="fas fa-hand-peace" alt="Computer's scissor icon"></span>
+            </div>
+            <div id="computerPaper" class="computerHand">
+                <span class="fas fa-hand-paper" alt="Computer's paper icon"></span>
+            </div>
+            <div id="computerRock" class="computerHand">
+                <span class="fas fa-hand-rock" alt="Computer's rock icon"></span>
+            </div>
+          </div>
+    
+          <div id="playSpacing">Choose a move</div>
+    
+          <div id="playerChoice">
+            <div id="playerRock" class="playerHand">
+              <span class="fas fa-hand-rock" alt="Your rock icon"></span>
+            </div>
+            <div id="playerPaper" class="playerHand">
+              <span class="fas fa-hand-paper" alt="Your paper icon"></span>
+            </div>
+            <div id="playerScissors" class="playerHand">
+              <span class="fas fa-hand-peace" alt="Your scissor icon"></span>
+            </div>
+          </div>
+
+        </div>
+    
+        <div id="scoreArea">
+          <div id="computerScore" class="score"></div>
+          <div id="infoBox"></div>
+          <div id="playerScore" class="score"></div>
+        </div>
+      </div>
+
+      <div id="footer"></div>
+    </div>
   </body>
+  <!-- <script src="js/rps.js" type="module"></script>
+  <script src="js/main.js" type="module"></script> -->
 </html>
