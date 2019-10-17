@@ -63,7 +63,10 @@
         </div>
 
         <div id="scoreArea">
-          <div id="computerScore" class="score">Computer Score</div>
+          <div class="scoreBar">
+            <div id="computerScoreFill" class="scoreFill"></div>
+            <div id="computerScoreText" class="scoreText">2</div>
+          </div>
           <div id="infoBox">
             <p id="info">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -72,13 +75,26 @@
               molestiae ad dignissimos illum!
             </p>
           </div>
-          <div id="playerScore" class="score">Your Score</div>
+          <div class="scoreBar">
+            <div id="playerScoreFill" class="scoreFill"></div>
+            <div id="computerScoreText" class="scoreText">4</div>
+          </div>
         </div>
       </div>
 
       <div id="footer"></div>
     </div>
   </body>
-  <!-- <script src="js/rps.js" type="module"></script>
-  <script src="js/main.js" type="module"></script> -->
+  <script src="js/rps.js" type="module"></script>
+  <script>
+    import { Rps } from "./js/rps.js";
+
+    const rps = new Rps();
+    // All player area queries
+
+    // All score area queries
+    const computerScore = document.querySelector("#computerScore");
+    const infoBox = document.querySelector("#infoBox");
+    const playerScore = document.querySelector("#playerScore");
+  </script>
 </html>
