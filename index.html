@@ -13,30 +13,42 @@
     <div id="viewport">
       <div id="header">
         <div id="headerContent">
-          <a href="https://www.theodinproject.com/courses/web-development-101/lessons/dom-manipulation"
-          >Rock, Paper, Scissors from The Odin Project</a>
+          <a
+            class="headerLink"
+            href="https://www.theodinproject.com/courses/web-development-101/lessons/dom-manipulation"
+            target="_blank"
+            >Assignment</a
+          >
+          <p>Rock, Paper, Scissors for The Odin Project</p>
+          <a
+            class="headerLink"
+            href="https://github.com/KurtYilmaz/rock-paper-scissors"
+            target="_blank"
+            >Github</a
+          >
         </div>
       </div>
 
       <div id="content">
         <div id="playArea">
-
           <div id="computerChoice" class="moveSelection">
-            <div id="computerScissors" class="computerHand hand">
-                <span class="fas fa-hand-peace" alt="Computer's scissor icon"></span>
+            <div id="computerRock" class="computerHand hand">
+              <span class="fas fa-hand-rock" alt="Computer's rock icon"></span>
             </div>
             <div id="computerPaper" class="computerHand hand">
-                <span class="fas fa-hand-paper" alt="Computer's paper icon"></span>
+              <span class="fas fa-hand-paper" alt="Computer's paper icon">
+              </span>
             </div>
-            <div id="computerRock" class="computerHand hand">
-                <span class="fas fa-hand-rock" alt="Computer's rock icon"></span>
+            <div id="computerScissors" class="computerHand hand">
+              <span class="fas fa-hand-peace" alt="Computer's scissor icon">
+              </span>
             </div>
           </div>
-    
+
           <div id="playSpacing">
             <h1>Select a move below</h1>
           </div>
-    
+
           <div id="playerChoice" class="moveSelection">
             <div id="playerRock" class="playerHand hand">
               <span class="fas fa-hand-rock" alt="Your rock icon"></span>
@@ -48,12 +60,18 @@
               <span class="fas fa-hand-peace" alt="Your scissor icon"></span>
             </div>
           </div>
-
         </div>
-    
+
         <div id="scoreArea">
           <div id="computerScore" class="score">Computer Score</div>
-          <div id="infoBox">Lorem Ipsum</div>
+          <div id="infoBox">
+            <p id="info">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reprehenderit hic, natus veritatis voluptatem odio, expedita ipsam
+              quo fuga nobis culpa enim dolor consequatur incidunt nulla porro,
+              molestiae ad dignissimos illum!
+            </p>
+          </div>
           <div id="playerScore" class="score">Your Score</div>
         </div>
       </div>
