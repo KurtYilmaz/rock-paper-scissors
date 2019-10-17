@@ -31,6 +31,7 @@ div {
 #headerContent {
   display: flex;
   justify-content: center;
+  vertical-align: center;
   font-size: 20px;
   z-index: 3;
 }
@@ -49,6 +50,8 @@ a {
   align-items: center;
 }
 
+/* Play Area ------------------------------------------------------------------*/
+
 #playArea {
   display: flex;
   flex-direction: column;
@@ -56,6 +59,56 @@ a {
   min-width: 50%;
   height: 80%;
 }
+
+#playSpacing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  height: 100%;
+  vertical-align: center;
+}
+
+#computerChoice {
+  margin-bottom: 45px;
+  margin-top: 10px;
+}
+
+#playerChoice {
+  margin-top: 45px;
+  margin-bottom: 10px;
+}
+
+.moveSelection {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  font-size: 100px;
+}
+
+.computerHand {
+  color: #bb86fc;
+  transform: rotate(180deg);
+}
+
+.playerHand {
+  color: #03dac6;
+}
+
+.hand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 40px;
+  width: 30%;
+  font-size: 200px;
+}
+
+.fa-hand-rock {
+  margin-top: 9px;
+}
+
+/* Score Area -----------------------------------------------------------------*/
 
 #scoreArea {
   display: flex;
@@ -75,50 +128,13 @@ a {
 }
 
 .score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.08);
   height: 10%;
   margin: 20px 0;
   padding: 30px;
-}
-
-#playSpacing {
-  text-align: center;
-  font-size: 2rem;
-  height: 100%;
-  vertical-align: center;
-}
-
-#computerChoice {
-  transform: rotate(180deg);
-}
-
-.moveSelection {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  font-size: 100px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
-.computerHand {
-  color: #bb86fc;
-}
-
-.playerHand {
-  color: #03dac6;
-}
-
-.hand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0px 40px;
-  width: 30%;
-  font-size: 150px;
-}
-
-.fa-hand-rock {
-  margin-top: 9px;
+  font-size: 70px;
 }
