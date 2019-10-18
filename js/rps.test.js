@@ -9,7 +9,7 @@ function testWin(a, b) {
 
 function testLose(a, b) {
   expect(rps.comparePlays(a, b)).toBe("l");
-  expect(rps.playRound(a, b)).toEqual(expect.stringContaining("You lose"));
+  expect(rps.playRound(a, b)).toEqual(expect.stringContaining("Loss"));
 }
 
 function testDraw(a, b) {
@@ -24,19 +24,19 @@ function testError(a, b) {
 
 //Testing computer pick
 test("computer gets < 1", () => {
-  expect(rps.computerPlay(0.5)).toBe("Rock");
+  expect(rps.computerPlay(0.5)).toBe("rock");
 });
 
 test("computer gets < 2", () => {
-  expect(rps.computerPlay(1.99)).toBe("Paper");
+  expect(rps.computerPlay(1.99)).toBe("paper");
 });
 
 test("computer gets < 3", () => {
-  expect(rps.computerPlay(2.1)).toBe("Scissors");
+  expect(rps.computerPlay(2.1)).toBe("scissors");
 });
 
 test("computer gets 2", () => {
-  expect(rps.computerPlay(2)).toBe("Paper");
+  expect(rps.computerPlay(2)).toBe("paper");
 });
 
 // Player = rock

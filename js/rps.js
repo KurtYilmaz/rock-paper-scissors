@@ -3,7 +3,7 @@ export class Rps {
   constructor() {
     this.playerScore = 0;
     this.computerScore = 0;
-    this.round = 0;
+    this.round = 1;
   }
 
   computerPlay(input = 0) {
@@ -12,42 +12,42 @@ export class Rps {
     input = Math.ceil(input);
     switch (input) {
       case 1:
-        result = "r";
+        result = "rock";
         break;
       case 2:
-        result = "p";
+        result = "paper";
         break;
       case 3:
-        result = "s";
+        result = "scissors";
         break;
       default:
-        result = "r";
+        result = "rock";
     }
     return result;
   }
 
   comparePlays(player, computer) {
     let result;
-    if (player == "r") {
-      if (computer == "s") {
+    if (player == "rock") {
+      if (computer == "scissors") {
         result = "w";
-      } else if (computer == "p") {
+      } else if (computer == "paper") {
         result = "l";
       } else {
         result = "d";
       }
-    } else if (player == "s") {
-      if (computer == "p") {
+    } else if (player == "scissors") {
+      if (computer == "paper") {
         result = "w";
-      } else if (computer == "r") {
+      } else if (computer == "rock") {
         result = "l";
       } else {
         result = "d";
       }
-    } else if (player == "p") {
-      if (computer == "r") {
+    } else if (player == "paper") {
+      if (computer == "rock") {
         result = "w";
-      } else if (computer == "s") {
+      } else if (computer == "scissors") {
         result = "l";
       } else {
         result = "d";
@@ -68,7 +68,7 @@ export class Rps {
         this.round +
         ": Win! Your " +
         player +
-        " beats Computer's" +
+        " beats Computer's " +
         computer +
         ".";
     } else if (result == "l") {
@@ -78,11 +78,12 @@ export class Rps {
         this.round +
         ": Loss. Computer's " +
         computer +
-        " beats your" +
+        " beats your " +
         player +
         ".";
     } else if (result == "d")
-      output = "Round " + this.round + ": Draw. Both picked " + player + ".";
+      output =
+        "Round " + this.round + ": Draw. Both picked " + player + ".";
     else output = "Error";
     this.round++;
     return output;
@@ -91,6 +92,6 @@ export class Rps {
   clearScores() {
     this.playerScore = 0;
     this.computerScore = 0;
-    this.round = 0;
+    this.round = 1;
   }
 }

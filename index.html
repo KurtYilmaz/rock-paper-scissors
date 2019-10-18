@@ -9,6 +9,7 @@
     ></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
+
   <body>
     <div id="viewport">
       <div id="header">
@@ -65,36 +66,21 @@
         <div id="scoreArea">
           <div class="scoreBar">
             <div id="computerScoreFill" class="scoreFill"></div>
-            <div id="computerScoreText" class="scoreText">2</div>
+            <div id="computerScoreText" class="scoreText">3</div>
           </div>
           <div id="infoBox">
-            <p id="info">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit hic, natus veritatis voluptatem odio, expedita ipsam
-              quo fuga nobis culpa enim dolor consequatur incidunt nulla porro,
-              molestiae ad dignissimos illum!
-            </p>
+            <p id="info"></p>
           </div>
           <div class="scoreBar">
             <div id="playerScoreFill" class="scoreFill"></div>
-            <div id="computerScoreText" class="scoreText">4</div>
+            <div id="playerScoreText" class="scoreText">3</div>
           </div>
         </div>
       </div>
 
       <div id="footer"></div>
     </div>
+    <script src="js/rps.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
-  <script src="js/rps.js" type="module"></script>
-  <script>
-    import { Rps } from "./js/rps.js";
-
-    const rps = new Rps();
-    // All player area queries
-
-    // All score area queries
-    const computerScore = document.querySelector("#computerScore");
-    const infoBox = document.querySelector("#infoBox");
-    const playerScore = document.querySelector("#playerScore");
-  </script>
 </html>
