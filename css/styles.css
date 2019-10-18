@@ -10,8 +10,6 @@
 html,
 body {
   height: 100%;
-  min-height: 100%;
-  width: 100%;
   margin: 0;
   color: white;
   overflow: auto;
@@ -24,7 +22,6 @@ div {
 
 #viewport {
   height: 100%;
-  width: 100%;
   background-color: var(--backgroundDark);
   top: 0;
   z-index: 1;
@@ -60,9 +57,11 @@ p {
 }
 
 #content {
-  height: 95%;
-  margin-top: 2.5%;
-  width: 100%;
+  height: 90%;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  margin-right: 2.5%;
+  width: 92.5%;
   display: inline-block;
 }
 
@@ -73,7 +72,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
-  min-height: 100%;
+  height: 100%;
   float: left;
 }
 
@@ -81,20 +80,20 @@ p {
   flex: 0;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: 3.5rem;
-  height: 100%;
 }
 
 #computerChoice {
   flex: 0;
-  margin-bottom: 8%;
-  margin-top: 2%;
+  margin-bottom: 4vh;
+  margin-top: 1vh;
 }
 
 #playerChoice {
   flex: 0;
-  margin-top: 8%;
-  margin-bottom: 2%;
+  margin-top: 4vh;
+  margin-bottom: 1vh;
 }
 
 .moveSelection {
@@ -121,7 +120,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 5%;
+  margin: 0 2.5vw;
   width: 30%;
   font-size: 20rem;
 }
@@ -134,22 +133,20 @@ p {
 
 #scoreArea {
   display: block;
-  min-height: 100%;
+  height: 100%;
   width: 40%;
-  padding-left: 3%;
+  padding-left: 1vw;
   font-size: 1.5rem;
-  position: relative;
   float: right;
 }
 
 #infoBox {
   z-index: 2;
   background-color: var(--layerSecond);
-  padding: 4%;
+  padding: 2vh;
   font-size: 3.5rem;
   overflow: auto;
-  min-height: 80%;
-  height: 80%
+  height: 64%;
 }
 
 .scoreBar {
@@ -157,7 +154,7 @@ p {
   border-style: solid;
   border-width: 1rem;
   border-color: var(--layerSecond);
-  margin: 2% 0;
+  margin: 2vh 0;
   font-size: 7rem;
   height: 10%;
   position: relative;
@@ -174,6 +171,7 @@ p {
 .scoreText {
   margin: auto;
   text-align: center;
+  vertical-align: center;
   z-index: 2;
   font-size: 10rem;
 }

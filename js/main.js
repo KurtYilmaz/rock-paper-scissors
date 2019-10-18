@@ -45,8 +45,10 @@ function playOneRound(id) {
   playerScoreFill.style.width = 20 * rps.playerScore + "%";
   computerScoreFill.style.width = 20 * rps.computerScore + "%";
   infoBox.innerText += result + "\n\n";
+  infoBox.scrollTop = infoBox.scrollHeight;
   if (rps.playerScore == 5) {
-    infoBox.innerText += "You win the set! Click a hand to play again!";
+    infoBox.innerText +=
+      "Congratulations! You win the set! Click a hand to play again!";
   } else if (rps.computerSCore == 5) {
     infoBox.innerText += "You lost the set :(. Click a hand to play again.";
   }

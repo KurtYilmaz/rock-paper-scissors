@@ -68,7 +68,7 @@ export class Rps {
         this.round +
         ": Win! Your " +
         player +
-        " beats Computer's " +
+        " beats the computer's " +
         computer +
         ".";
     } else if (result == "l") {
@@ -76,14 +76,13 @@ export class Rps {
       output =
         "Round " +
         this.round +
-        ": Loss. Computer's " +
+        ": Loss. The computer's " +
         computer +
         " beats your " +
         player +
         ".";
     } else if (result == "d")
-      output =
-        "Round " + this.round + ": Draw. Both picked " + player + ".";
+      output = "Round " + this.round + ": Draw. Both picked " + player + ".";
     else output = "Error";
     this.round++;
     return output;
