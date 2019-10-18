@@ -1,15 +1,187 @@
-html, body {
-    font-size:large;
-    margin: 0;
-    height: 100%;
-    background-color: #102027;
+:root {
+  --colorPrimary: #bb86fc;
+  --colorPlayer: #03dac6;
+  --layerSecond: rgba(255, 255, 255, 0.08);
+  --backgroundPrimary: #bb86fc60;
+  --backgroundPlayer: #03dac660;
+  --backgroundDark: #121212;
 }
 
-#headingLink {
-    color: white;
-    position: absolute;
-    text-align: center;
-    top: 40%;
-    left: 40%;
-    margin-right: 40%;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  color: white;
+  overflow: auto;
+  font-size: 0.75vmin;
+}
+
+div {
+  display: block;
+}
+
+#viewport {
+  height: 100%;
+  background-color: var(--backgroundDark);
+  top: 0;
+  z-index: 1;
+}
+
+#header {
+  height: 3.5rem;
+  background-color: var(--layerSecond);
+  z-index: 2;
+  width: 100%;
+}
+
+#headerContent {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: center;
+  font-size: 3.5rem;
+  z-index: 3;
+}
+
+.headerLink {
+  color: var(--colorPrimary);
+  margin: 0 2%;
+}
+
+a {
+  margin: 0;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+#content {
+  height: 90%;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  margin-right: 2.5%;
+  width: 92.5%;
+  display: inline-block;
+}
+
+/* Play Area ------------------------------------------------------------------*/
+
+#playArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+#playSpacing {
+  flex: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+#computerChoice {
+  flex: 0;
+  margin-bottom: 4vh;
+  margin-top: 1vh;
+}
+
+#playerChoice {
+  flex: 0;
+  margin-top: 4vh;
+  margin-bottom: 1vh;
+}
+
+.moveSelection {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.computerHand {
+  color: var(--colorPrimary);
+  transform: rotate(180deg);
+}
+
+.playerHand {
+  color: var(--colorPlayer);
+}
+
+.playerHand:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 0.4rem var(--colorPrimary));
+}
+
+.hand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2.5vw;
+  width: 30%;
+  font-size: 20rem;
+}
+
+.fa-hand-rock {
+  margin-top: 8%;
+}
+
+/* Score Area -----------------------------------------------------------------*/
+
+#scoreArea {
+  display: block;
+  height: 100%;
+  width: 40%;
+  padding-left: 1vw;
+  font-size: 1.5rem;
+  float: right;
+}
+
+#infoBox {
+  z-index: 2;
+  background-color: var(--layerSecond);
+  padding: 2vh;
+  font-size: 3.5rem;
+  overflow: auto;
+  height: 64%;
+}
+
+.scoreBar {
+  z-index: 2;
+  border-style: solid;
+  border-width: 1rem;
+  border-color: var(--layerSecond);
+  margin: 2vh 0;
+  font-size: 7rem;
+  height: 10%;
+  position: relative;
+}
+
+.scoreFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  z-index: 1;
+}
+
+.scoreText {
+  margin: auto;
+  text-align: center;
+  vertical-align: center;
+  z-index: 2;
+  font-size: 10rem;
+}
+
+#computerScoreFill {
+  width: 60%;
+  background-color: var(--backgroundPrimary);
+}
+
+#playerScoreFill {
+  width: 60%;
+  background-color: var(--backgroundPlayer);
 }
