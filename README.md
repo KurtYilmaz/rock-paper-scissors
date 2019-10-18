@@ -13,11 +13,3 @@ The following npm modules are required to run the unit tests. Install with the f
 - npm install --save-dev **babel-jest**
 
 - npm install --save-dev **eslint**
-
-Alternatively, they may be installed globally using the following.
-
-- npm install -g **jest**
-
-- npm install -g **babel-jest**
-
-- npm install -g **eslint**
