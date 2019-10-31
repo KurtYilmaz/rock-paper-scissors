@@ -6,4 +6,4 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/courses/web-
 Extra unit testing was done for exposure to Jest. 
 [For more information on getting started with Jest, click here.](https://jestjs.io/docs/en/getting-started)
 
-Run 'npm install' in the root directory to run tests.
+Run `npm install` in the root directory to run tests.
