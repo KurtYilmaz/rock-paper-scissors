@@ -6,10 +6,4 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/courses/web-
 Extra unit testing was done for exposure to Jest. 
 [For more information on getting started with Jest, click here.](https://jestjs.io/docs/en/getting-started)
 
-The following npm modules are required to run the unit tests. Install with the following commands. Yarn may also be used instead of npm.
-
-- npm install --save-dev **jest**
-
-- npm install --save-dev **babel-jest**
-
-- npm install --save-dev **eslint**
+Run 'npm install' in the root directory to run tests.
